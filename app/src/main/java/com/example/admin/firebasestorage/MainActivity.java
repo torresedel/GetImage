@@ -145,7 +145,8 @@ public class MainActivity extends AppCompatActivity {
                                 etDescription.getText().toString().isEmpty()){
                             Toast.makeText(requestpto_dialog.getContext(), "Empty Fields", Toast.LENGTH_SHORT).show();
                         }else{
-                            ///////////////////////////////CREATE REQUESTEDPTO OBJECT
+                            PTORequestInfoClass ptoRequestInfo = new PTORequestInfoClass(calendarFrom.getTime(),
+                                    calendarTo.getTime(), etDescription.getText().toString(), "Pending");
                         }
             }
         });
