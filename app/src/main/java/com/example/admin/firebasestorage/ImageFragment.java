@@ -1,10 +1,8 @@
 package com.example.admin.firebasestorage;
 
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -13,12 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
-
-import java.io.InputStream;
 
 import static android.app.Activity.RESULT_OK;
-import static android.content.ContentValues.TAG;
 
 
 public class ImageFragment extends Fragment {
@@ -26,6 +20,7 @@ public class ImageFragment extends Fragment {
     private static final int GALLERY_INTENT = 2;
     private ImageView iView;
     private Button btnOpenGal;
+    private static final String TAG = "ImageFragmentTag";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -59,6 +54,7 @@ public class ImageFragment extends Fragment {
             final Uri uri = data.getData();
 
             iView.setImageURI(uri);
+            Log.d(TAG, "onActivityResult: RequestCode: " + requestCode);
         }
     }
 }

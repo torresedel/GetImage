@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.admin.firebasestorage.InputPtoInfo">
+
+    <EditText
+        android:id="@+id/etPtoInput_totalPto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Total Pto"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etPtoInput_usedPto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Used Pto"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etPtoInput_remainingPto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Remaining Pto"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/btnSubmitPtoInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Pto Info" />
+
+</LinearLayout>
