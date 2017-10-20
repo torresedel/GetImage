@@ -23,6 +23,12 @@
         android:layout_height="wrap_content"
         android:text="Insert Pto Info" />
 
+    <Button
+        android:id="@+id/btnRequestPto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Request Pto" />
+
     <fragment
         android:id="@+id/imageFragment"
         android:name="com.example.admin.firebasestorage.ImageFragment"

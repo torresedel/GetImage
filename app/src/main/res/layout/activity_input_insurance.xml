@@ -11,7 +11,7 @@
     <Spinner
         android:id="@+id/spinnerInsuranceInput_type"
         android:layout_width="match_parent"
-        android:entries="@string-array/InsuranceType_array"
+        android:entries="@array/InsuranceType_array"
         android:layout_height="wrap_content"
         />
 

@@ -5,12 +5,12 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="image_fireb_storage">Image from Firebase Storage</string>
 
-    <string-array name="InsuranceType_array">
+    <array name="InsuranceType_array">
         <item>Medical Insurance</item>
         <item>Dental Insurance</item>
         <item>Vision Insurance</item>
         <item>Short Term Disability Insurance</item>
         <item>Long Term Disability Insurance</item>
         <item>Life Insurance</item>
-    </string-array>
+    </array>
 </resources>
