@@ -68,10 +68,10 @@ public class InputTodayAssignment extends AppCompatActivity {
     @RequiresApi(api = Build.VERSION_CODES.N)
     private void setSubmit() {
 
-        if (etTodayAssignmentTitle.getText().toString().isEmpty() &&
-                etTodayAssignmentDescription.getText().toString().isEmpty() &&
-                etTodayAssignmentDate.getText().toString().isEmpty() &&
-                etTodayAssignmentDueDate.getText().toString().isEmpty()) {
+        if (!etTodayAssignmentTitle.getText().toString().isEmpty() &&
+                !etTodayAssignmentDescription.getText().toString().isEmpty() &&
+                !etTodayAssignmentDate.getText().toString().isEmpty() &&
+                !etTodayAssignmentDueDate.getText().toString().isEmpty()) {
 
             if (assignmentLinks.size() == 0) {
                 Log.d(TAG, "setSubmit: assignmentLinks.size() == 0");
@@ -80,26 +80,32 @@ public class InputTodayAssignment extends AppCompatActivity {
                     TodayAssignment todayAssignment = new TodayAssignment(etTodayAssignmentTitle.getText().toString(),
                             etTodayAssignmentDescription.getText().toString(), df.parse(etTodayAssignmentDate.getText().toString()),
                             df.parse(etTodayAssignmentDueDate.getText().toString()));
+                    Toast.makeText(this, "Submit Success", Toast.LENGTH_SHORT).show();
                     Log.d(TAG, "setSubmit: " + todayAssignment.toString());
 
                 } catch (ParseException e) {
                     e.printStackTrace();
-                    Log.d(TAG, "onClick: " + e);
+                    if (e.getErrorOffset() == 0) {
+                        Toast.makeText(this, "Wrong Date", Toast.LENGTH_SHORT).show();
+                    }
+                    Log.d(TAG, "setSubmit: " + e);
                 }
             } else {
-                DateFormat df = new SimpleDateFormat("MM/dd/yyyy");
-                try {
+                java.text.SimpleDateFormat df = new java.text.SimpleDateFormat("MM/dd/yyyy");
+                try {///////////////////////////////////////////////////////////////SET OBJECT WITH LINKS
                     TodayAssignment todayAssignment = new TodayAssignment(etTodayAssignmentTitle.getText().toString(),
                             etTodayAssignmentDescription.getText().toString(), assignmentLinks,
                             df.parse(etTodayAssignmentDate.getText().toString()),
                             df.parse(etTodayAssignmentDueDate.getText().toString()));
+                    Toast.makeText(this, "Submit Success", Toast.LENGTH_SHORT).show();
                     Log.d(TAG, "setSubmit: " + todayAssignment.toString());
+                    Log.d(TAG, "setSubmit: "+df.format(todayAssignment.getAssignDate()));
                 } catch (ParseException e) {
                     e.printStackTrace();
                     Log.d(TAG, "onClick: " + e);
                 }
             }
-        }else{
+        } else {
             Log.d(TAG, "setSubmit: ERROR");
         }
     }
