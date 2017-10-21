@@ -35,6 +35,12 @@
         android:layout_height="wrap_content"
         android:text="Input Assignment Info" />
 
+    <Button
+        android:id="@+id/btnTodayAssignment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input Today Assignment" />
+
     <fragment
         android:id="@+id/imageFragment"
         android:name="com.example.admin.firebasestorage.ImageFragment"

@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     EditText etDateTo;
     @BindView(R.id.btnInsertAssignment)
     Button btnInsertAssignment;
+    @BindView(R.id.btnTodayAssignment)
+    Button btnTodayAssignment;
 
     private Calendar calendarFrom;
     private Calendar calendarTo;
@@ -72,6 +74,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent();
                 intent.setClass(getApplicationContext(), InputAssignmentInfo.class);
+                startActivity(intent);
+            }
+        });
+        btnTodayAssignment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(getApplicationContext(), InputTodayAssignment.class);
                 startActivity(intent);
             }
         });

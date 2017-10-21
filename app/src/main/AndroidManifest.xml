@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".InputInsurance" />
         <activity android:name=".InputPtoInfo" />
-        <activity android:name=".InputAssignmentInfo"></activity>
+        <activity android:name=".InputAssignmentInfo" />
+        <activity android:name=".InputTodayAssignment"></activity>
     </application>
 
 </manifest>
