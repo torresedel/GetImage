@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".InputInsurance" />
-        <activity android:name=".InputPtoInfo"></activity>
+        <activity android:name=".InputPtoInfo" />
+        <activity android:name=".InputAssignmentInfo"></activity>
     </application>
 
 </manifest>
