@@ -1,50 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="10dp"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
-    android:paddingTop="10dp"
-    tools:context="com.example.admin.firebasestorage.MainActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnInsertInsuranceInfo"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         android:paddingBottom="10dp"
-        android:text="Insert Insurance Info" />
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp"
+        tools:context="com.example.admin.firebasestorage.MainActivity">
 
-    <Button
-        android:id="@+id/btnInsertPtoInfo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Insert Pto Info" />
+        <Button
+            android:id="@+id/btnInsertInsuranceInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="Insert Insurance Info" />
 
-    <Button
-        android:id="@+id/btnRequestPto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Request Pto" />
+        <Button
+            android:id="@+id/btnInsertPtoInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Insert Pto Info" />
 
-    <Button
-        android:id="@+id/btnInsertAssignment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Input Assignment Info" />
+        <Button
+            android:id="@+id/btnRequestPto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Request Pto" />
 
-    <Button
-        android:id="@+id/btnTodayAssignment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Input Today Assignment" />
+        <Button
+            android:id="@+id/btnInsertAssignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Assignment Info" />
 
-    <fragment
-        android:id="@+id/imageFragment"
-        android:name="com.example.admin.firebasestorage.ImageFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        <Button
+            android:id="@+id/btnTodayAssignment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Today Assignment" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btnComposeEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Compose Email" />
+
+        <Button
+            android:id="@+id/btnInsertInterviewInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Input Interview Info" />
+
+        <fragment
+            android:id="@+id/imageFragment"
+            android:name="com.example.admin.firebasestorage.ImageFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</ScrollView>

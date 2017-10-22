@@ -32,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
     Button btnInsertAssignment;
     @BindView(R.id.btnTodayAssignment)
     Button btnTodayAssignment;
+    @BindView(R.id.btnComposeEmail)
+    Button btnComposeEmail;
+    @BindView(R.id.btnInsertInterviewInfo)
+    Button btnInsertInterviewInfo;
 
     private Calendar calendarFrom;
     private Calendar calendarTo;
@@ -85,6 +89,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnComposeEmail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(getApplicationContext(), ComposeEmailActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnInsertInterviewInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(getApplicationContext(), InputInterviewInfo.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void setBtnRequestListener(View v) {
@@ -135,7 +155,8 @@ public class MainActivity extends AppCompatActivity {
                 Calendar maxTo = calendarFrom;
                 maxTo.add(Calendar.DAY_OF_MONTH, 1);
                 datePicker.setMinDate(maxTo.getTime().getTime());
-                Button setDate = datepicker_dialog[1].findViewById(R.id.setDate);
+                Button
+                        setDate = datepicker_dialog[1].findViewById(R.id.setDate);
                 setDate.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

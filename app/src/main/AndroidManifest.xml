@@ -19,7 +19,9 @@
         <activity android:name=".InputInsurance" />
         <activity android:name=".InputPtoInfo" />
         <activity android:name=".InputAssignmentInfo" />
-        <activity android:name=".InputTodayAssignment"></activity>
+        <activity android:name=".InputTodayAssignment" />
+        <activity android:name=".ComposeEmailActivity" />
+        <activity android:name=".InputInterviewInfo"></activity>
     </application>
 
 </manifest>
